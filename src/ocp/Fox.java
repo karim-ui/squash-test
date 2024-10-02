@@ -814,23 +814,24 @@ class A implements I {
         return null;
     }
 
-    public int longestIdealString(String s, int k) {
+    public static int longestIdealString(String s, int k) {
 
         int longest = 0;
         if (s == null || s.isEmpty()) return longest;
+        if(s.length()==1) return  1;
         char[] chars = s.toCharArray();
-        char ref = chars[0];
+        char ref ;
         int max = 0;
         for (int m = 0; m < chars.length; m++) {
             ref = chars[m];
-            longest = 0;
-            for (int i = 1; i < chars.length; i++) {
+            longest = 1;
+            for (int i = m+1; i < chars.length; i++) {
                 if (Math.abs(chars[i] - ref) <= k) {
                     longest++;
                     ref = chars[i];
                 }
             }
-            if (longest > max) max = longest;
+            if (longest >= max) max = longest;
         }
         return max;
     }
@@ -881,19 +882,48 @@ class A implements I {
     }
 
     public static void main(String[] args) {
-        var moves = "RL";
+        /*var moves = "RL";
         int width = 5;
         int height = 4;
         int[] position = {1, 1};
         int[] portalA = {2, 1};
         int[] portalB = {0, 3};
         var result = ComputeFinalPosition(width, height, position, portalA, portalB, moves);
-        System.out.println((result[0] + " " + result[1]));
+        System.out.println((result[0] + " " + result[1]));*/
+        List<String> strings=new ArrayList<>(Arrays.asList("A","B","C"));
+
+        for(String s : strings)
+        {
+            if(s=="A") strings.remove(s);
+        }
+        System.out.println(strings);
 
     }
 }
 
 class B extends A {
+    int nbrEights(int amount, int giftees) {
+        for (int k = giftees; k >= 0; k--) {
+            int amount_remaining = amount - 8 * k;
+            int giftees_remaining = giftees - k;
+
+            // Each remaining giftee must receive at least 1
+            if (amount_remaining < giftees_remaining) continue;
+
+            // Cannot assign amounts if no giftees remain but amount is left
+            if (giftees_remaining == 0) {
+                if (amount_remaining == 0) return k;
+                else continue;
+            }
+
+            // Check for the impossible case
+            if (amount_remaining == 4 && giftees_remaining == 1) continue;
+
+            // Valid distribution found
+            return k;
+        }
+        return 0; // If no valid distribution is found
+    }
 }
 
 
