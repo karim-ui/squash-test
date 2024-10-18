@@ -882,21 +882,7 @@ class A implements I {
     }
 
     public static void main(String[] args) {
-        /*var moves = "RL";
-        int width = 5;
-        int height = 4;
-        int[] position = {1, 1};
-        int[] portalA = {2, 1};
-        int[] portalB = {0, 3};
-        var result = ComputeFinalPosition(width, height, position, portalA, portalB, moves);
-        System.out.println((result[0] + " " + result[1]));*/
-        List<String> strings=new ArrayList<>(Arrays.asList("A","B","C"));
-
-        for(String s : strings)
-        {
-            if(s=="A") strings.remove(s);
-        }
-        System.out.println(strings);
+        System.out.println(1==new Integer(1));
 
     }
 }

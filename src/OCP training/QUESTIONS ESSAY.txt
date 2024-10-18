@@ -1,0 +1,49 @@
+**java quizz 1
+
+	1. ABCE BE
+	2. CD
+	3. ACD CD 
+	4. CD
+	5. ACDE
+	6. F
+	7. B ABC
+	8. ABCD AB
+	9. B
+	10. E
+	11. CDE CD
+	12. E CE
+	13. C 
+	14. AE ABCE
+	15. D E WARNING !!
+	16. A D
+	17. AE
+	18. C CDE
+	19. B BC
+	20. ADC ABE
+	
+**java quizz 2
+
+	1. BGE
+	2.  
+	3. 
+	4.
+	5.AD
+	6.CE
+	7.G
+	8.BF
+	9.FEC
+	10.	C
+	11. ADE
+	12. ACEF
+	13. BDH
+	14. CFB
+	15. ACFG
+	16. ABD
+	17 ACEFG
+	18. ABG
+	19. D
+	20. D
+	21. ADF
+	22. CDE
+	
+
